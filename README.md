@@ -87,6 +87,43 @@ CentOS 7 has reached its End of Life (EOL), which means its repositories may no 
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
    ```
 
+   or
+
+   ```ini
+   [base]
+   name=CentOS-7 - Base
+   baseurl=http://vault.centos.org/7.9.2009/os/x86_64/
+   gpgcheck=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+   
+   [updates]
+   name=CentOS-7 - Updates
+   baseurl=http://vault.centos.org/7.9.2009/updates/x86_64/
+   gpgcheck=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+   
+   [extras]
+   name=CentOS-7 - Extras
+   baseurl=http://vault.centos.org/7.9.2009/extras/x86_64/
+   gpgcheck=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+   
+   [centos-sclo-rh]
+   name=CentOS-6.10 - SCLo rh
+   baseurl=http://vault.centos.org/centos/6.10/sclo/$basearch/rh/
+   gpgcheck=1
+   enabled=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+   
+   [centos-sclo-sclo]
+   name=CentOS-6.10 - SCLo sclo
+   baseurl=http://vault.centos.org/centos/6.10/sclo/$basearch/sclo/
+   gpgcheck=1
+   enabled=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+   ```
+
+
    Save the file and exit the editor.
 
 #### Step 4: Clean YUM Cache
